@@ -207,7 +207,7 @@ h1{
 }
 
 .stack img{
-  width: 50%;              /* ⬅️ ajusta: 80–90% */
+  width: 70%;              /* ⬅️ ajusta: 80–90% */
   height: auto;
   display: block;
   object-fit: contain;
