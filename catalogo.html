@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo — DREAMPAINTS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">DREAM<span>PAINTS</span></a>
+
+    <nav class="nav" aria-label="Navegación">
+      <a href="index.html#galeria">Galería</a>
+      <a class="active" href="catalogo.html">Catálogo</a>
+      <a class="btn btn--small" href="index.html#contacto">Comprar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+
+    <div class="section__head">
+      <h1>Catálogo de cuadros</h1>
+      <p class="muted">Gira la ruleta para descubrir una obra.</p>
+    </div>
+
+    <!-- RULETA GLOBAL -->
+    <section class="slot" aria-label="Ruleta del catálogo">
+      <div class="slot__media">
+        <img id="slotImg" src="" alt="" />
+      </div>
+
+      <div class="slot__info">
+        <div>
+          <h2 id="slotTitle">—</h2>
+          <p id="slotMeta" class="muted">—</p>
+        </div>
+
+        <div class="slot__actions">
+          <button id="slotPrev" class="btn btn--small" type="button">◀ Anterior</button>
+          <button id="slotSpin" class="btn btn--small" type="button">🎰 Girar</button>
+          <button id="slotNext" class="btn btn--small" type="button">Siguiente ▶</button>
+          <a id="slotAsk" class="btn btn--small btn--ghost" href="index.html#contacto">Consultar</a>
+        </div>
+
+        <label class="slot__auto muted">
+          <input id="slotAuto" type="checkbox" />
+          Auto-ruleta (cada 2s)
+        </label>
+      </div>
+    </section>
+
+    <!-- DATA OCULTA -->
+    <!-- ✅ Sin data-title ni data-img: solo <img src="..."> + data-tam -->
+    <div id="catalogoData" hidden>
+
+      <article class="card" data-tam="30×25"><img src="imagenes/abriendo-paso.jpg" alt=""></article>
+      <article class="card" data-tam="40×50"><img src="imagenes/abzu.jpeg" alt=""></article>
+      <article class="card" data-tam="—"><img src="imagenes/amor-espacial.jpeg" alt=""></article>
+      <article class="card" data-tam="—"><img src="imagenes/amor-gatuno.jpeg" alt=""></article>
+      <article class="card" data-tam="60×30"><img src="imagenes/amor-plumado.jpeg" alt=""></article>
+      <article class="card" data-tam="30×30"><img src="imagenes/amortiguadores-del-destino.jpeg" alt=""></article>
+      <article class="card" data-tam="90×60"><img src="imagenes/arco-lapiz.jpeg" alt=""></article>
+      <article class="card" data-tam="40×50"><img src="imagenes/beso-en-las-profundidades.jpg" alt=""></article>
+      <article class="card" data-tam="60×30"><img src="imagenes/caballos-a-galope.jpg" alt=""></article>
+      <article class="card" data-tam="30×40"><img src="imagenes/celulas-madre.jpeg" alt=""></article>
+      <article class="card" data-tam="—"><img src="imagenes/chloe-fluyendo-por-la-realidad.jpg" alt=""></article>
+      <article class="card" data-tam="30×40"><img src="imagenes/corazones-de-dulce.jpeg" alt=""></article>
+      <article class="card" data-tam="50×20"><img src="imagenes/dulcilandia.jpeg" alt=""></article>
+      <article class="card" data-tam="—"><img src="imagenes/el-baño-del-unicornio.jpeg" alt=""></article>
+      <article class="card" data-tam="60×30"><img src="imagenes/estallido-silvestre.jpg" alt=""></article>
+      <article class="card" data-tam="30×40"><img src="imagenes/geminis.jpg" alt=""></article>
+      <article class="card" data-tam="40×50"><img src="imagenes/grifos-abiertos.jpeg" alt=""></article>
+      <article class="card" data-tam="30×20"><img src="imagenes/hamburguesa-dimensional.jpeg" alt=""></article>
+      <article class="card" data-tam="30×40"><img src="imagenes/hojas-de-otoño.jpeg" alt=""></article>
+      <article class="card" data-tam="30×40"><img src="imagenes/inminente-brindis.jpeg" alt=""></article>
+      <article class="card" data-tam="50×40"><img src="imagenes/la-llave-que-abre-todas-las-puertas.jpeg" alt=""></article>
+      <article class="card" data-tam="60×40"><img src="imagenes/la-rosa-de-catalunya.jpeg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/las-cerezas-de-polserioc.jpeg" alt=""></article>
+      <article class="card" data-tam="60×30"><img src="imagenes/libelula.jpg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/mi-esencia-salada.jpeg" alt=""></article>
+      <article class="card" data-tam="50×40"><img src="imagenes/mishu-al-sol.jpg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/misivas.jpeg" alt=""></article>
+      <article class="card" data-tam="25×20"><img src="imagenes/multivision.jpg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/musica-colorida.jpeg" alt=""></article>
+      <article class="card" data-tam="60×30"><img src="imagenes/paraiso-tropical.jpg" alt=""></article>
+      <article class="card" data-tam="30×40"><img src="imagenes/pavo-real-de-primavera.jpg" alt=""></article>
+      <article class="card" data-tam="30×20"><img src="imagenes/pepitas.jpg" alt=""></article>
+      <article class="card" data-tam="40×60"><img src="imagenes/puzzle-de-corazones.jpg" alt=""></article>
+      <article class="card" data-tam="40×40"><img src="imagenes/regando-la-primavera.jpeg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/semilla-musical.jpg" alt=""></article>
+      <article class="card" data-tam="60×30"><img src="imagenes/sol-y-luna-cosmicos.jpeg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/sopa-de-momentos.jpeg" alt=""></article>
+      <article class="card" data-tam="50×30"><img src="imagenes/torsion.jpeg" alt=""></article>
+      <article class="card" data-tam="30×60"><img src="imagenes/tropa-silvestre.jpeg" alt=""></article>
+      <article class="card" data-tam="25×30"><img src="imagenes/vinilo-alado.jpeg" alt=""></article>
+      <article class="card" data-tam="40×30"><img src="imagenes/ying-yang.jpeg" alt=""></article>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> DREAMPAINTS</p>
+    <div class="footer__links">
+      <a href="index.html#galeria">Galería</a>
+      <a href="catalogo.html">Catálogo</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+  const slotImg   = document.getElementById("slotImg");
+  const slotTitle = document.getElementById("slotTitle");
+  const slotMeta  = document.getElementById("slotMeta");
+
+  const slotPrev  = document.getElementById("slotPrev");
+  const slotSpin  = document.getElementById("slotSpin");
+  const slotNext  = document.getElementById("slotNext");
+  const slotAuto  = document.getElementById("slotAuto");
+
+  const dataRoot = document.getElementById("catalogoData");
+
+  let index = 0;
+  let spinning = false;
+  let autoTimer = null;
+
+  function getCards(){
+    return Array.from(dataRoot.querySelectorAll(".card"));
+  }
+
+  // "imagenes/sol-y-luna-cosmicos.jpeg" -> "Sol Y Luna Cosmicos"
+  function titleFromSrc(src){
+    const file = (src || "").split("/").pop() || "";
+    const name = file.replace(/\.[^.]+$/, "");
+    return name
+      .replace(/[_-]+/g, " ")
+      .replace(/([a-zA-Z])(\d+)/g, "$1 $2")
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function getCardData(card){
+    const imgEl = card.querySelector("img");
+    const src = imgEl ? imgEl.getAttribute("src") : "";
+    const tam = card.dataset.tam || "—";
+    const title = titleFromSrc(src);
+    return { title, tam, src };
+  }
+
+  function render(i){
+    const cards = getCards();
+    if (!cards.length) return;
+
+    index = ((i % cards.length) + cards.length) % cards.length;
+    const d = getCardData(cards[index]);
+
+    // ✅ fix: fuerza que la primera imagen se pinte siempre al cargar
+    slotImg.src = "";
+    requestAnimationFrame(() => {
+      slotImg.src = d.src;
+      slotImg.alt = d.title;
+    });
+
+    slotTitle.textContent = d.title;
+    slotMeta.textContent = `${d.tam} cm`;
+  }
+
+  function spin(){
+    if (spinning) return;
+    const cards = getCards();
+    if (cards.length < 2) return;
+
+    spinning = true;
+
+    const spins = Math.min(22, Math.max(12, cards.length * 2));
+    let step = 0;
+    const start = index;
+    const final = Math.floor(Math.random() * cards.length);
+
+    const timer = setInterval(() => {
+      step++;
+      render(start + step);
+      if (step > spins) {
+        clearInterval(timer);
+        render(final);
+        spinning = false;
+      }
+    }, 70);
+  }
+
+  slotPrev.addEventListener("click", () => { if (!spinning) render(index - 1); });
+  slotNext.addEventListener("click", () => { if (!spinning) render(index + 1); });
+  slotSpin.addEventListener("click", spin);
+
+  slotAuto.addEventListener("change", () => {
+    if (slotAuto.checked){
+      autoTimer = setInterval(spin, 2000);
+    } else {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  });
+
+  render(0);
+</script>
+
+</body>
+</html>

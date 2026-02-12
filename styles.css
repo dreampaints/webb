@@ -455,3 +455,170 @@ input:focus, textarea:focus{
 @media (max-width: 520px){
   .grid{ grid-template-columns: 1fr; }
 }
+
+.catalogo__tools{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.catalogo__input,
+.catalogo__select{
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(0,0,0,.25);
+  color:inherit;
+}
+.slot{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:16px;
+  align-items:stretch;
+  margin: 10px 0 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0,0,0,.18);
+}
+
+.slot__media{
+  aspect-ratio: 16 / 10;
+  background: rgba(0,0,0,.25);
+}
+
+.slot__media img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.slot__info{
+  padding: 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.slot__actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.slot__auto{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  user-select:none;
+}
+
+@media (max-width: 900px){
+  .slot{ grid-template-columns: 1fr; }
+}
+/* ===========================
+   CATÁLOGO — RULETA GLOBAL
+   (pegar al final de styles.css)
+   =========================== */
+
+/* Marca visual para link activo en el menú */
+.nav a.active{
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(120, 90, 180, .18);
+}
+
+/* Ruleta con look coherente con tu web (panel claro + borde suave) */
+.slot{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:16px;
+  align-items:stretch;
+  margin: 10px 0 18px;
+
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(120, 90, 180, .18);
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+}
+
+/* Fondo del área de imagen (muy suave) */
+.slot__media{
+  aspect-ratio: 16 / 10;
+  background: rgba(255,255,255,.35);
+}
+
+.slot__media img{
+  width:100%;
+  height:100%;
+  object-fit: contain;     /* 👈 CLAVE: no recorta */
+  display:block;
+
+  /* opcional: un poco de aire alrededor */
+  padding: 10px;
+
+  /* mantiene el look psicodélico */
+  filter: saturate(1.12) contrast(1.05);
+}
+
+
+  /* un poco de “pop” psicodélico */
+  filter: saturate(1.12) contrast(1.05);
+}
+
+/* Panel derecho */
+.slot__info{
+  padding: 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  gap: 12px;
+
+  /* texto como el resto de tu web (oscuro) */
+  color: #05030a;
+}
+
+/* Asegura que todos los textos dentro se vean oscuros */
+.slot__info *{
+  color: #05030a;
+}
+
+/* Meta/subtítulo */
+.slot__info .muted{
+  color: #3a2a5e;
+}
+
+/* Botonera */
+.slot__actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* Auto-ruleta */
+.slot__auto{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  user-select:none;
+
+  color: #3a2a5e;
+}
+.slot__auto input{
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--neon2);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .slot{ grid-template-columns: 1fr; }
+  .slot__media{ aspect-ratio: 16 / 11; }
+}
